@@ -4,7 +4,7 @@ void main(List<String> args) {
   runApp(
     Center(
       child: Text(
-        "Olá Alice",
+        "Olá Flutter",
         textDirection: TextDirection.ltr,
       ),
     )
