@@ -6,6 +6,7 @@ void main() {
   runApp(
     Center(
       child: RichText(
+        textAlign: TextAlign.center,
         textDirection: TextDirection.ltr,
         text: TextSpan(
           text: "Olá, ",
@@ -25,7 +26,6 @@ void main() {
                 decorationStyle: TextDecorationStyle.double,
               ),
             ),
-            TextDirection.ltr
             TextSpan(
               text: '\nHoje é sábado',
               style: TextStyle(
