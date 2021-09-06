@@ -1,43 +1,41 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  String nome = "Alice";
-
   runApp(
-    Center(
-      child: RichText(
-        textAlign: TextAlign.center,
-        textDirection: TextDirection.ltr,
-        text: TextSpan(
-          text: "Olá, ",
-          style: TextStyle(
-            color: Colors.green,
-            fontSize: 30,
-            fontWeight: FontWeight.bold,
-            backgroundColor: Colors.black,
+    Row(
+      textDirection: TextDirection.ltr,
+      children: [
+        Expanded(
+          child: FittedBox(
+            fit: BoxFit.contain, //altera tamanho da logo
+            child: Image(
+              image: NetworkImage(
+                "https:/picsum.photos/250?image=10",
+              ),
+            ),
           ),
-          children: [
-            TextSpan(
-              text: "$nome",
-              style: TextStyle(
-                color: Colors.blue,
-                decoration: TextDecoration.underline,
-                decorationColor: Colors.red,
-                decorationStyle: TextDecorationStyle.double,
-              ),
-            ),
-            TextSpan(
-              text: '\nHoje é sábado',
-              style: TextStyle(
-                color: Colors.white,
-              ),
-            ),
-            TextSpan(
-              text: "! \nBoa noite!",
-            ),
-          ],
         ),
-      ),
+        Expanded(
+          child: FittedBox(
+            fit: BoxFit.contain,
+            child: Image(
+              image: NetworkImage(
+                "https://picsum.photos/250?image=25",
+              ),
+            ),
+          ),
+        ),
+        Expanded(
+          child: FittedBox(
+            fit: BoxFit.contain,
+            child: Image(
+              image: NetworkImage(
+                "https://picsum.photos/250?image=15",
+              ),
+            ),
+          ),
+        ),
+      ],
     ),
   );
 }
